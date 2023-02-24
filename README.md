@@ -53,12 +53,12 @@ END;
 ```
  TYPE record_type IS RECORD (field1 INTEGER, field2 VARCHAR(50), field3 number(5));
 ```
-This statement is used to define a custom data type called a record in PL/SQL. A record is a composite data type that contains a set of related fields. 
+This statement is used to define a custom data type called a **record** in PL/SQL. A record is a composite data type that contains a set of related fields. 
 
 ```
 TYPE table_type IS TABLE OF record_type;
 ```
- This statement is used to define a custom collection type in PL/SQL. It allows to create a collection of multiple values of the same datatype. In this method we define that our table_type (collection) will receive the composite data type (record).
+ This statement is used to define a custom collection type in PL/SQL. It allows to create a **collection** of multiple values of the same datatype. In this method we define that our table_type (collection) will receive the composite data type (record).
 
 ```
 collection1 table_type;
@@ -80,7 +80,7 @@ FORALL i IN collection1.FIRST..collection1.LAST
   field2 = collection1(i).field2   
   WHERE field3 = collection1(i).field3;
 ```
-The FORALL statement is used to perform a bulk operation on a PL/SQL collection. It is more efficient than looping through each element and performing individual operations.
+The **FORALL** statement is used to perform a bulk operation on a PL/SQL collection. It is more efficient than looping through each element and performing individual operations.
 
 ### Conclusion
 
