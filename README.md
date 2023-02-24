@@ -51,4 +51,10 @@ END;
 
 ### Understanding the syntax
 
+> #### TYPE record_type IS RECORD
 
+```
+ TYPE record_type IS RECORD (field1 INTEGER, field2 VARCHAR(50), field3 number(5));
+```
+
+aa
