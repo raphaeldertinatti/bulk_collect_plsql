@@ -52,9 +52,18 @@ END;
 ### Understanding the syntax
 
 > #### TYPE record_type IS RECORD
-
 ```
  TYPE record_type IS RECORD (field1 INTEGER, field2 VARCHAR(50), field3 number(5));
 ```
+This statement is used to define a custom data type called a record in PL/SQL. A record is a composite data type that contains a set of related fields. 
 
-aa
+> #### TYPE table_type IS TABLE OF record_type;
+```
+TYPE table_type IS TABLE OF record_type;
+```
+ This statement is used to define a custom collection type in PL/SQL. It allows to create a collection of multiple values of the same datatype. In this method we define that our table_type (collection) will receive the composite data type (record).
+
+> #### collection1 table_type;
+The final declaration is a variable called collection1 that receives the table_type collection.
+
+
