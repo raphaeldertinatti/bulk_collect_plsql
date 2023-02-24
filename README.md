@@ -65,5 +65,24 @@ collection1 table_type;
 ```
 The final declaration is a variable called collection1 that receives the table_type collection.
 
+```
+BEGIN
+  SELECT field1, field2, field3
+  BULK COLLECT INTO collection1
+  FROM table1;  
+```
+This statement is used to fetch multiple rows of data from a SQL query and store them in a PL/SQL collection variable, in this case we are storing the data into collection1.
 
+```
+FORALL i IN collection1.FIRST..collection1.LAST
+  UPDATE table2
+  SET field1 = collection1(i).field1, 
+  field2 = collection1(i).field2   
+  WHERE field3 = collection1(i).field3;
+```
+The FORALL statement is used to perform a bulk operation on a PL/SQL collection. It is more efficient than looping through each element and performing individual operations.
+
+### Conclusion
+
+The bulk data processing in PL/SQL is an excellent solution for optimize performance in your transactions.
 
